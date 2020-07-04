@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Register Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body class="bg--pc">
+  <div class="logo"> 
+    <a class="logo_link" href="https://www.olphlagos.bbmschool.com">
+      <img src="./img/olphlagos_logo.png" alt="olphlagos-logo">
+    </a>
+  </div>
+  <form id="msform" target="_blank" action="http://127.0.0.1:8080/" method="POST">
+    <!-- progressbar -->
+    <ul id="progressbar">
+      <li class="active">Personal Details</li>
+      <li>Personal Details 2</li>
+      <li>Spouse Details</li>
+  </ul>
+  <!-- fieldsets -->
+  <fieldset>
+      <h2 class="fs-title">Step 1</h2>
+      <h3 class="fs-subtitle">Create your account</h3>
+      <input type="text" name="surname" placeholder="Surname" required/>
+      <input type="text" name="first_name" placeholder="First Name" required/>
+
+      <label for="baptism" class="control-label">Baptism date</label>
+      <input id="baptism" name="baptism" class="form-control input-lg js-date--west" type="text" placeholder="_ _ /_ _ /_ _ _ _">
+      <p class="help-block">E.g. dd/mm/yyyy</p>
+
+      <label for="wedding" class="control-label">Wedding date</label>
+      <input id="wedding" name="wedding" class="form-control input-lg js-date--west" type="text" placeholder="_ _ /_ _ /_ _ _ _">
+      <p class="help-block">E.g. dd/mm/yyyy</p>
+      
+       <input type="email" name="email" placeholder="Email" required/>
+
+      <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+  <fieldset>
+      <h2 class="fs-title">Step 2</h2>
+      <h3 class="fs-subtitle">Almost there...</h3></h3>
+      <input type="text" name="christian_name" placeholder="Christian Name"/>
+      <div class="birthDate">
+          <label for="Dob" class="control-label">Enter your date of birth</label>
+          <input id="Dob" name="dob" class="form-control input-lg js-date--west" type="text" placeholder="_ _ /_ _ /_ _ _ _">
+          <p class="help-block">E.g. dd/mm/yyyy</p>
+      </div>
+      <select class="select-style" name="sex" >
+          <option> Gender </option>
+          <option>Male</option>
+          <option>Female</option>
+      </select>
+      <input type="text" name="occupation" placeholder="Occupation" />
+      <select class="select-style" name="state_of_origin">
+          <option>State Of Origin</option>
+          <option value="abuja">ABUJA FCT</option>
+          <option value="abia">ABIA</option>
+          <option value="adamawa">ADAMAWA</option>
+          <option value="akwa ibom">AKWA IBOM</option>
+          <option value="anambra">ANAMBRA</option>
+          <option value="bauchi">BAUCHI</option>
+          <option value="bayelsa">BAYELSA</option>
+          <option value="benue">BENUE</option>
+          <option value="borno">BORNO</option>
+          <option value="cross river">CROSS RIVER</option>
+          <option value="delta">DELTA</option>
+          <option value="ebonyi">EBONYI</option>
+          <option value="edo">EDO</option>
+          <option value="ekiti">EKITI</option>
+          <option value="enugu">ENUGU</option>
+          <option value="gombe">GOMBE</option>
+          <option value="imo">IMO</option>
+          <option value="jigawa">JIGAWA</option>
+          <option value="kaduna">KADUNA</option>
+          <option value="kano">KANO</option>
+          <option value="kastina">KATSINA</option>
+          <option value="kebbi">KEBBI</option>
+          <option value="kogi">KOGI</option>
+          <option value="kwara">KWARA</option>
+          <option value="lagos">LAGOS</option>
+          <option value="nassarawa">NASSARAWA</option>
+          <option value="niger">NIGER</option>
+          <option value="ogun">OGUN</option>
+          <option value="ondo">ONDO</option>
+          <option value="osun">OSUN</option>
+          <option value="oyo">OYO</option>
+          <option value="plateau">PLATEAU</option>
+          <option value="rivers">RIVERS</option>
+          <option value="sokoto">SOKOTO</option>
+          <option value="taraba">TARABA</option>
+          <option value="yobe">YOBE</option>
+          <option value="zamfara">ZAMFARA</option>
+      </select>
+      <input  type="text" name="phone_number" id="phone" placeholder="Phone" maxlength="11" pattern="([0-9]|[0-9]|[0-9]|[0-9]|[0-9]|[0-9]|[0-9]|[0-9]|[0-9]||[0-9]|[0-9])"/>
+      <textarea name="address" placeholder="Address"></textarea>
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+      <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+  <fieldset>
+      <h2 class="fs-title">Step 3</h2>
+      <h3 class="fs-subtitle">Yay! You made it</h3>
+      <input type="text" name="spouse_name" placeholder="Spouse name" />
+      <div class="birthDate">
+          <label for="S_Dob" class="control-label">Spouse date of birth</label>
+          <input id="S_Dob" name="spouse_dob" class="form-control input-lg js-date--west" type="text" placeholder="_ _ /_ _ /_ _ _ _">
+          <p class="help-block">E.g. dd/mm/yyyy</p>
+      </div>
+      <input type="text" name="spouse_occupation" placeholder="Occupation" />
+      <input  type="text" name="spouse_phone" id="phone" placeholder="Phone" maxlength="11" pattern="([0-9]|[0-9]|[0-9]|[0-9]|[0-9]|[0-9]|[0-9]|[0-9]|[0-9]||[0-9]|[0-9])"/>
+      <input type="email" name="spouse_email" placeholder="Email" />
+      
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+      <input type="submit" name="submit" class="submit action-button" value="Submit" />
+      <div class="g-recaptcha" data-sitekey="6LetpgAVAAAAAEMdW6VgE8mRGbSAIfXB8sdDBwqI"></div>
+  </fieldset>
+  </form>
+
+<!-- JS -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" 
+        integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA=" 
+        crossorigin="anonymous">
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

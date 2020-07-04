@@ -1,0 +1,354 @@
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+*,*::after,*::before{
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	min-height: 100%;/*10px*/
+	background-size: cover;
+}
+
+body{
+	font-family: montserrat, arial, verdana;
+	box-sizing: border-box;
+	position: relative;
+	height: 100vh;
+	background-clip: content-box;
+	transform: scale(1) !important;
+}
+
+.bg--pc{
+
+	background-image:
+	url("https://res.cloudinary.com/tegaguru/image/upload/v1589467521/register-black_bpuizn.jpg");
+	background-size:cover;
+	min-height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	backface-visibility: hidden; 
+}
+
+.logo{
+	position: relative;
+	height: 100px;
+	width: 100%;
+	margin-top:20px;
+	margin-bottom: 10px;
+}
+.logo_link{
+	position: fixed;
+	left: 50%;
+	top: 7%;
+    transform: translate(-50%, -50%);
+}
+/*form styles*/
+#msform {
+	width: 400px;
+	margin: 9rem auto;
+	text-align: center;
+	position: relative;
+}
+
+
+
+
+
+#msform fieldset {
+	background-color: rgba(255,255,255,.3);
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 2rem 3rem;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0 auto;
+
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+	padding: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+}
+/*buttons*/
+.action-button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+.select-style {
+	display: block;
+	color: #444;
+	line-height: 1.3;
+	padding: .6em 1.4em .5em .8em;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	border: 1px solid #aaa;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+	border-radius: 3px;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+	background-size: .65em auto, 100%;
+}
+.select-style::-ms-expand {
+	display: none;
+}
+.select-style:hover {
+	border-color: #888;
+}
+.select-style:focus {
+	border-color: #aaa;
+	box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+	box-shadow: 0 0 0 3px -moz-mac-focusring;
+	color: #222;
+	outline: none;
+}
+.select-style option {
+	font-weight:normal;
+}
+
+
+/* Support for rtl text, explicit support for Arabic and Hebrew */
+*[dir="rtl"] .select-style, :root:lang(ar) .select-style, :root:lang(iw) .select-style {
+	background-position: left .7em top 50%, 0 0;
+	padding: .6em .8em .5em 1.4em;
+}
+
+/* Disabled styles */
+.select-style:disabled, .select-style[aria-disabled=true] {
+	color: graytext;
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+	  linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+}
+.select-style:disabled:hover, .select-style[aria-disabled=true] {
+	border-color: #aaa;
+}
+
+label.control-label{
+	font-size: 10px;
+	display: block;
+	opacity: 0.8;
+	color: #ffffff;
+	text-align: left;
+	margin-bottom:5px;
+}
+
+p.help-block{
+	font-size: 8px;
+	display:block;
+	text-align: left;
+	margin-top: -5px;
+	color: #ffffff;
+	opacity: 0.7;
+	margin-bottom:10px;
+}
+
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: white;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: white;
+	opacity: 0.7;
+	margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 33.33%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #27AE60;
+	color: white;
+}
+
+
+/* mains for the succesful page */
+
+.bg--brown{
+	background-color: rgb(239,222,205);
+}
+
+.confirmation{
+	background-color: #CCC1AB;
+	width: 46%;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 30px;
+	margin:10% auto;
+	padding: 5rem;
+	position: relative;
+
+}
+
+.icon{
+	width:12%;
+	height:12%;
+	margin: 0 auto;
+	display: block;
+}
+.confirmation__text .welcome{
+	font-size: 40px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	text-align:center;
+	white-space: nowrap
+}
+
+.confirmation__text .notes{
+	font-size: 20px;
+	margin-bottom: 20px;
+	line-height:1.2;
+	text-align:center;
+}
+a{
+	text-decoration: none;
+}
+
+.spam-text{
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+.spam-text span{
+    font-weight: bold;
+}
+.button__center{
+	display: block;
+	margin: 0 auto;
+}
+@media only screen and (max-width:800px){
+	#msform {
+		width: 80%;
+	}
+}
+
+@media only screen and (max-width:600px){
+	#msform {
+		width: 100%;
+		margin: 0;
+		margin-top: 6rem;
+		margin-bottom: 6rem;
+		margin:auto;
+	}
+}
+
+.form__div{
+	position: relative;
+}
+
+@media only screen and (max-width:800px){
+	.confirmation{
+		width: 70%;
+		margin: auto;
+		margin-top: 10rem;
+		padding:5rem;
+	}
+	.confirmation__text .welcome{
+		font-size: 28px;
+		font-weight: 600;
+		margin-bottom: 10px;
+		text-align:center;
+		white-space: nowrap
+	}
+	.confirmation__text .notes{
+		font-size: 18px;
+
+	}
+}
+
+@media only screen and (max-width:600px){
+	.confirmation{
+		width: 80%;
+		margin: auto;
+		margin-top: 6rem;
+		padding:3.8rem;
+	}
+	.confirmation__text .welcome{
+		font-size: 20px;
+		font-weight: 600;
+		margin-bottom: 10px;
+	}
+	.confirmation__text .notes{
+		font-size: 16px;
+	}
+}
+
